@@ -88,6 +88,7 @@ def model_load(config):
 
 def hrnet_pose(frame, det_dim=416, num_peroson=1, gen_output=False):
     args = parse_args()
+    print("Arguments are ....",args)
     reset_config(args)
     # print("###Rasul###")
 

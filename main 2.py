@@ -282,7 +282,7 @@ def get_pose3D(img, output_dir):
             json_string = json.dumps(json_structure, indent=4)
 
             # Print the JSON string
-            # print(json_string)
+            print(json_string)
             
             
             show3Dpose(post_out, ax)
@@ -300,7 +300,7 @@ def get_pose3D(img, output_dir):
     pose_3d = cv2.resize(pose_3d, (frame_width, frame_height))
     print('----------------Generating 3D pose successful!----------------')
     
-    return pose_3d, json_string
+    return pose_3d
 
     
 def flip_data(data, left_joints=[1, 2, 3, 14, 15, 16], right_joints=[4, 5, 6, 11, 12, 13]):

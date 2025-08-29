@@ -26,8 +26,10 @@ def process_frame(frame, start_time, action_time_list):
 
     # Get 2D and 3D poses and merge images
     get_time = get_pose2D(frame, output_dir)
-    pose_3d = get_pose3D(frame, output_dir)
+    pose_3d, pose = get_pose3D(frame, output_dir)
     combined_img = merge_img(frame, output_dir)
+    
+    print(pose)
 
     # Define text properties
     font = cv2.FONT_HERSHEY_SIMPLEX
